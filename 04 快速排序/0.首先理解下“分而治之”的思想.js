@@ -6,13 +6,13 @@
 // 编写一个sum函数用递归的方式求和
 function sum(arr) {
   // 基线条件
-  if(arr.length === 1) {
-    return arr[0]
+  if (arr.length === 1) {
+    return arr[0];
   }
   // 递归条件（缩小范围）
-  let endItem = arr.pop()
-  return endItem + sum(arr)
+  let endItem = arr.pop();
+  return endItem + sum(arr);
 }
 
-const arr = [1, 44, 11, 22]
-console.log(sum(arr))
+const arr = [1, 44, 11, 22];
+console.log(sum(arr));
