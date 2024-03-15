@@ -38,6 +38,7 @@ function test() {
   const expectArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
   const newArr1 = unfoldArr(arr);
   const newArr2 = unfoldArr2(arr);
+  // 比较展开结果与预期数组是否一致
   ensure(dequal(expectArr, newArr1), "unfoldArr");
   ensure(dequal(expectArr, newArr2), "unfoldArr2");
 }

@@ -5,8 +5,8 @@ function selectionSort(arr) {
   let smallestIndex = 0;
   let temp;
 
+  //最后一次无需交换，故 length - 1
   for (let i = 0; i < arr.length - 1; i++) {
-    //最后一次无需交换，故length -1
     smallestIndex = i;
     for (let j = i + 1; j < arr.length; j++) {
       if (arr[j] < arr[smallestIndex]) {
