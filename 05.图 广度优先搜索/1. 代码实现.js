@@ -18,12 +18,12 @@ function search(name) {
   queue.push(...graph[name]); // 添加一级人脉
 
   while (queue.length >= 1) {
-    let person = queue.shift(); // 出队拿到第一个待检查人员
+    const person = queue.shift(); // 出队拿到第一个待检查人员
 
-    if (searched.indexOf(person) == -1) {
-      // 没有检查过才运行，防止循环引用
+    // 没有检查过才运行，防止循环引用
+    if (searched.indexOf(person) === -1) {
+      // 本例为了简单起见，假设了thom在做芒果生意
       if (person === "thom") {
-        // 本例为了简单起见，假设了thom在做芒果生意
         return "找到了是：" + person;
       } else {
         // 入队person的朋友
